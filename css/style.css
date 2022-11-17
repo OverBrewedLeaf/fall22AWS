@@ -1,6 +1,6 @@
 body {
   font-family: Gill Sans, sans-serif;
-  background-color: white;
+  background-color: whitesmoke;
   text-align: center;
 }
 
@@ -13,14 +13,15 @@ p {
 }
 
 a {
+  font-size: 1.25rem;
   text-decoration: none;
   color: blue;
   background-color: lavender;
-  padding: 10px;  
+  padding: .7rem;  
 }
 
 .back {
-  margin: 40px;
+  margin: 2rem;
 }
 
 .zoo-button {
