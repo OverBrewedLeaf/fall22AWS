@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+
+.navbar {
+    font-family: Gill Sans, sans-serif;
+}
+
+.informational-text {
+    font-size: larger;
+    font-family: monospace;
+}
+
+.caption {
+    font-family:'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.caption a {
+    font-size: small;
+}
+
+
+.thumbnail img {
+    width: 100%;
+}
+
+.red-panda-icon {
+    width: 10%;
+}
