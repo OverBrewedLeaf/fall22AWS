@@ -14,5 +14,11 @@ a{
 }
 
 .back { 
-  margin: 40px;
+  text-align: center;
+  width: 6rem;
+  margin: 2.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: lavender;
+  padding: 10px;
 }
