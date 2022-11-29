@@ -1,29 +1,23 @@
+.container {
+  height: auto;
+  width: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.container img {
+  width: 360px;
+  height: 760px;
+}
+
 body {
   font-family: Gill Sans, sans-serif;
-  background-color: whitesmoke;
+  background-image: linear-gradient(to right,orange,tan);
   text-align: center;
-}
-
-p {
-  font-size: 1.25rem;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100ch;
-}
-
-a {
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: blue;
-  background-color: lavender;
-  padding: .7rem;  
-}
-
-.back {
-  margin: 2rem;
 }
 
 .zoo-button {
-  padding: 15px;
+  width: auto;
+  height: auto;
 }
