@@ -1,16 +1,23 @@
+.container {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container img {
+  width: 300px;
+  height: 160px;
+  margin: .5rem;
+}
+
 body {
   font-family: Gill Sans, sans-serif;
-  background-color: cyan;
+  background-image: linear-gradient(cyan, blue);
   text-align: center;
-}
-
-a{
-  text-decoration: none;
-  color: black;
-}
-
-.link {
-  margin: 10px;
+  background-attachment: fixed;
 }
 
 .back { 
