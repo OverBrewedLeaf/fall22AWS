@@ -1,7 +1,8 @@
 body {
   font-family: Gill Sans, sans-serif;
-  background-color: cyan;
+  background-image: linear-gradient(cyan,blue);
   text-align: center;
+  background-attachment: fixed;
 }
 
 p {
