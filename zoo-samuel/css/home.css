@@ -12,6 +12,13 @@ text {
   margin-left: 10%;
 }
 
+h0 {
+  color: black;
+  font-size: 45px;
+  margin: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
 h1 {
   color: black;
   border: 10px solid rgb(231, 154, 38);
