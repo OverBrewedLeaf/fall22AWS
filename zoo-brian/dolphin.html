@@ -49,11 +49,11 @@
       function handleClick(cb) {
         if(cb.checked){
           localStorage.setItem("myContent", 0);
-          localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) + 1);
+          // localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) + 1);
           document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
         }else{
-          localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) - 1);
-          document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
+          // localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) - 1);
+          // document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
         }
       }
     </script>
