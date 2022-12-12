@@ -48,16 +48,14 @@
     <script>
       function handleClick(cb) {
         if(isNaN(localStorage.getItem("myContent"))){
-          localStorage.setItem("myContent", "abc");
+          localStorage.setItem("myContent", "0");
         }
         if(cb.checked){
           localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) + 1);
           document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
         }else{
-          localStorage.setItem("myContent", "efg");
+          localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) - 1);
           document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
-          // localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) - 1);
-          // document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
         }
       }
     </script>
