@@ -40,19 +40,23 @@
     </p>
     
     <label class="add-fav">
-      <input type="checkbox" id="addFav">Add to Favoirtes</input>
+      <input type="checkbox"id="addLike" onclick="handleClick(this)" 
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
     </label>
 
+    <script>
+      function handleClick(cb) {
+        if(cb.checked){
+          document.getElementById("likes").innerHTML = 1;
+        }else{
+          document.getElementById("likes").innerHTML = 0;
+        }
+      }
+    </script>
+    
     <div class = "back">
       <a href="../zoo-brian/brian.html">Back</a>
     </div>
 
-    <script>
-      checkBox = document.getElementById('addFav').addEventListener('click', event => {
-	      if(event.target.checked) {
-	  	    alert("Checkbox checked!");
-	      }
-      });
-    </script>
   </body>
 </html>
