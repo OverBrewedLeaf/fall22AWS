@@ -26,7 +26,7 @@ body {
 h1 {
   color: white;
   border: 5px solid rgb(93, 136, 98);
-  font-size: 75px;
+  font-size: 65px;
   margin: 0;
   background-color: rgb(93, 136, 98);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -35,8 +35,53 @@ h1 {
 h2 {
   color: white;
   border: 5px solid rgb(93, 136, 98);
-  font-size: 35px;
+  font-size: 45px;
   margin-top: 0;
   background-color: rgb(93, 136, 98);
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h2 a {
+  color: white;
+  text-decoration: none;
+}
+
+h3 {
+  color: rgb(93, 136, 98);
+  text-decoration: none;
+  font-size: 35px;
+  margin: 10px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h3 a {
+  color: rgb(93, 136, 98);
+  font-size: 35px;
+  text-decoration: none;
+}
+
+h4 a {
+  color: white;
+  font-size: 45px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-decoration: none;
+}
+
+.button {
+  color: black;
+  display: inline-block;
+  padding: 5px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: -webkit-linear-gradient( top,#fff,#ddd) #ddd;
+  position: relative;
+  transition: all .5s ease;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 1px #eee;
+}
+
+p {
+  color: white;
+  font-size: 20px;
+  margin: 1px;
 }

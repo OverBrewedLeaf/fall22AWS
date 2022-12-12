@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Favorites Page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <h1>Favorites Page</h1>
+
+    <script>
+        function axolotl_(){
+            localStorage.setItem("axolotl_", "false");
+            localStorage.setItem("axolotl_likes", parseInt(localStorage.getItem("axolotl_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("axolotl_") == "true"){
+            document.write("<h3><a href=\"zoo-brian/axolotl.html\">Axolotl</a> <p id=\"demo\" onclick=\"axolotl_()\">Remove</p>");
+        }
+        function dolphin_(){
+            localStorage.setItem("dolphin_", "false");
+            localStorage.setItem("dolphin_likes", parseInt(localStorage.getItem("dolphin_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("dolphin_") == "true"){
+            document.write("<h3><a href=\"zoo-brian/dolphin.html\">Dolphin</a> <p id=\"demo\" onclick=\"dolphin_()\">Remove</p>");
+        }
+        function squid_(){
+            localStorage.setItem("squid_", "false");
+            localStorage.setItem("squid_likes", parseInt(localStorage.getItem("squid_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("squid_") == "true"){
+            document.write("<h3><a href=\"zoo-brian/squid.html\">Squid</a> <p id=\"demo\" onclick=\"squid_()\">Remove</p>");
+        }
+        function turtle_(){
+            localStorage.setItem("turtle_", "false");
+            localStorage.setItem("turtle_likes", parseInt(localStorage.getItem("turtle_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("turtle_") == "true"){
+            document.write("<h3><a href=\"zoo-brian/turtle.html\">Turtle</a> <p id=\"demo\" onclick=\"turtle_()\">Remove</p>");
+        }
+    </script> 
+    
+    
+
+    <h4>
+        <div class = "back">
+            <a href="index.html">Back to Home Page</a>
+        </div>
+    </h4>
+
+  </body>
+</html>
