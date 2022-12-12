@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tickets Page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body>
+
+    <h1>Tickets Page</h1>
+
+    <script>
+        function add(){
+            if(localStorage.getItem("balance_") == null){
+                localStorage.setItem("balance_", "0");
+            }
+            localStorage.setItem("balance_", parseInt(localStorage.getItem("balance_")) + 100);
+            location.reload();
+        }
+        
+        document.write("<h2>Balance: " + localStorage.getItem("balance_") + "<p id=\"demo\" onclick=\"add()\">Add account to account balance</p> </h2>");
+        //localStorage.setItem("tickets_","ticket1.ticket2.ticket3");
+        let tickets = localStorage.getItem("tickets_");
+        let arr = {
+            tickets: tickets.split(".")
+        };
+        function remove(number, arr){
+            let result = "";
+            let finished = [];
+            for(let i = 0; i < arr.length; i++){
+                if(i != number){
+                    result += arr[i] + ".";
+                    finished += arr.tickets[i];
+                }
+            }
+            localStorage.setItem("tickets_", result);
+            arr.tickets = finished;
+            location.reload();
+        }
+        for(let i = 0; i < arr.tickets.length; i++){
+            console.log(arr.length);
+            document.write("<h3>" + arr.tickets[i] + "<h3><p id=\"demo\" onclick=\"remove(" + i + ",arr)\">Refund</p>");
+        }
+        // function axolotl_(){
+        //     localStorage.setItem("axolotl_", "false");
+        //     localStorage.setItem("axolotl_likes", parseInt(localStorage.getItem("axolotl_likes")) - 1);
+        //     location.reload();
+        // }
+        // if(localStorage.getItem("axolotl_") == "true"){
+        //     document.write("<h3><a href=\"zoo-brian/axolotl.html\">Axolotl</a> <p id=\"demo\" onclick=\"axolotl_()\">Refund</p></h3>");
+        // }
+        // function dolphin_(){
+        //     localStorage.setItem("dolphin_", "false");
+        //     localStorage.setItem("dolphin_likes", parseInt(localStorage.getItem("dolphin_likes")) - 1);
+        //     location.reload();
+        // }
+        // if(localStorage.getItem("dolphin_") == "true"){
+        //     document.write("<h3><a href=\"zoo-brian/dolphin.html\">Dolphin</a> <p id=\"demo\" onclick=\"dolphin_()\">Refund</p></h3>");
+        // }
+    </script> 
+    
+    
+
+    <h4>
+        <div class = "back">
+            <a href="index.html">Back to Home Page</a>
+        </div>
+    </h4>
+
+  </body>
+</html>
