@@ -47,10 +47,19 @@
 
     <script>
       function handleClick(cb) {
-        if(cb.checked){
+        if(localStorage.getItem("squid_likes") == null){
+          localStorage.setItem("squid_likes", "1");
           document.getElementById("likes").innerHTML = 1;
-        }else{
-          document.getElementById("likes").innerHTML = 0;
+        }
+        else if(cb.checked){
+          localStorage.setItem("squid_likes", parseInt(localStorage.getItem("squid_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("squid_likes");
+          localStorage.setItem("squid_", "true");
+        }
+        else{
+          localStorage.setItem("squid_likes", parseInt(localStorage.getItem("squid_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("squid_likes");
+          localStorage.setItem("squid_", "false");
         }
       }
     </script>

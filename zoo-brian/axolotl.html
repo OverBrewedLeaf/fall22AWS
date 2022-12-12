@@ -47,10 +47,19 @@
 
     <script>
       function handleClick(cb) {
-        if(cb.checked){
+        if(localStorage.getItem("axolotl_likes") == null){
+          localStorage.setItem("axolotl_likes", "1");
           document.getElementById("likes").innerHTML = 1;
-        }else{
-          document.getElementById("likes").innerHTML = 0;
+        }
+        else if(cb.checked){
+          localStorage.setItem("axolotl_likes", parseInt(localStorage.getItem("axolotl_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("axolotl_likes");
+          localStorage.setItem("axolotl_", "true");
+        }
+        else{
+          localStorage.setItem("axolotl_likes", parseInt(localStorage.getItem("axolotl_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("axolotl_likes");
+          localStorage.setItem("axolotl_", "false");
         }
       }
     </script>

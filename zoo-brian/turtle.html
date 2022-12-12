@@ -48,15 +48,19 @@
 
     <script>
       function handleClick(cb) {
-        if(isNaN(localStorage.getItem("myContent")) || localStorage.getItem("myContent") == "abc"){
-          localStorage.setItem("myContent", "0");
+        if(localStorage.getItem("turtle_likes") == null){
+          localStorage.setItem("turtle_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
         }
-        if(cb.checked){
-          localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) + 1);
-          document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
-        }else{
-          localStorage.setItem("myContent", parseInt(localStorage.getItem("myContent")) - 1);
-          document.getElementById("likes").innerHTML = localStorage.getItem("myContent");
+        else if(cb.checked){
+          localStorage.setItem("turtle_likes", parseInt(localStorage.getItem("turtle_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("turtle_likes");
+          localStorage.setItem("turtle_", "true");
+        }
+        else{
+          localStorage.setItem("turtle_likes", parseInt(localStorage.getItem("turtle_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("turtle_likes");
+          localStorage.setItem("turtle_", "false");
         }
       }
     </script>
