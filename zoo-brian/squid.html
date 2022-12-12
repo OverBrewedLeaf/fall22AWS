@@ -2,9 +2,34 @@
 <html>
   <head>
     <title>Squid</title>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">
+            <img src="img/ocean.jpg" alt="paw print logo" width="30" height="20"
+              style="display: inline-block;">
+            Home Page
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="turtle.html">Sea Turtle</a></li>
+          <li><a href="axolotl.html">Axolotl</a></li>
+          <li><a href="dolphin.html">Bottlenose Dolphin</a></li>
+          <li><a href="squid.html">Squid</a></li>
+        </ul>
+      </div>
+    </nav>
+    
     <h1>Squid</h1>
     <img src="img/squid.jpg" width="500" height="400" alt="squid">
     <p> 
@@ -13,9 +38,25 @@
       beak to cut their prey into smaller pieces to swallow. They are also capable of changing color for camouflage and signalling 
       and some spcies are bioluminescent.
     </p>
-    
+
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)" 
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(cb.checked){
+          document.getElementById("likes").innerHTML = 1;
+        }else{
+          document.getElementById("likes").innerHTML = 0;
+        }
+      }
+    </script>
+
     <div class = "back">
       <a href="../zoo-brian/brian.html">Back</a>
     </div>
+    
   </body>
 </html>

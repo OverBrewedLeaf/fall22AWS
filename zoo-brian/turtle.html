@@ -2,20 +2,62 @@
 <html>
   <head>
     <title>Turtle</title>
+    <!-- Bootstrap -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="../index.html">
+            <img src="img/ocean.jpg" alt="paw print logo" width="30" height="20"
+              style="display: inline-block;">
+            Home Page
+          </a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="turtle.html">Sea Turtle</a></li>
+          <li><a href="axolotl.html">Axolotl</a></li>
+          <li><a href="dolphin.html">Bottlenose Dolphin</a></li>
+          <li><a href="squid.html">Squid</a></li>
+        </ul>
+      </div>
+    </nav>
+
     <h1>Sea Turtle</h1>
     <img src="img/turtle.jpg" width="500" height="400" alt="turtle">
+    
     <p> 
       Sea turtles are from the superfamily Chelonioidea and are reptiles of the order Testidines. They have a more fusiform body, 
       which means the middle of their body is wide and it tapers on body ends. This means that sea turtles cannot retract their head 
       and limbs into their shell because of the lack of volume, however the shape allows them to be more hydrodynamic. Sea turtles can
       be found in all oceans except the polar regions. 
     </p>
-    
+
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)" 
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(cb.checked){
+          document.getElementById("likes").innerHTML = 1;
+        }else{
+          document.getElementById("likes").innerHTML = 0;
+        }
+      }
+    </script>
+
     <div class = "back">
       <a href="../zoo-brian/brian.html">Back</a>
     </div>
+
   </body>
 </html>
