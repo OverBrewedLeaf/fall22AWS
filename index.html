@@ -9,31 +9,35 @@
     <h1>Welcome to Our Zoos!</h1>
     <h2>
       <div class = "back">
-          <a href="favorites.html">Favorites Page |</a>
+          <a href="favorites.html">Favorites Page </a>|
           <a href="tickets.html"> Tickets Page</a>
       </div>
     </h2>
-      
+
     <div class="container">
       <div class="zoo-button">
         <a href="zoo-brian/brian.html"><img src="img/ocean.png"></a>
       </div>
-  
+
       <div class="zoo-button">
         <a href="zoo-jeffrey/index.html"><img src="img/desert.png"></a>
       </div>
-  
+
       <div class="zoo-button">
         <a href="zoo-samuel/index.html"><img src="img/forest.png"></a>
       </div>
-  
+
       <div class="zoo-button">
         <!-- I couldn't think of a name/category for your animals -->
         <a href="zoo-maya/map.html"><img src="img/zoo.png"></a>
-      </div>  
+      </div>
     </div>
-    
-    
+
+    <script>
+        if(localStorage.getItem("balance_") == null){
+            localStorage.setItem("balance_", "0");
+        }
+    </script>
 
   </body>
 </html>

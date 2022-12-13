@@ -30,18 +30,18 @@
         </ul>
       </div>
     </nav>
-    
+
     <h1>Squid</h1>
     <img src="img/squid.jpg" width="500" height="400" alt="squid">
-    <p> 
-      The squid is a cephalopod in the cephalopoda class. Squids have an elongated soft body, large eyes, eight arms, 
-      and two tentacles. The tentacles are used to grab their prey, and the arms are to hold and control it. Squids also have a 
-      beak to cut their prey into smaller pieces to swallow. They are also capable of changing color for camouflage and signalling 
+    <p>
+      The squid is a cephalopod in the cephalopoda class. Squids have an elongated soft body, large eyes, eight arms,
+      and two tentacles. The tentacles are used to grab their prey, and the arms are to hold and control it. Squids also have a
+      beak to cut their prey into smaller pieces to swallow. They are also capable of changing color for camouflage and signalling
       and some spcies are bioluminescent.
     </p>
 
     <label class="add-fav">
-      <input type="checkbox"id="addLike" onclick="handleClick(this)" 
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
         style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
     </label>
 
@@ -50,6 +50,7 @@
         if(localStorage.getItem("squid_likes") == null){
           localStorage.setItem("squid_likes", "1");
           document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("squid_", "true");
         }
         else if(cb.checked){
           localStorage.setItem("squid_likes", parseInt(localStorage.getItem("squid_likes")) + 1);
@@ -67,6 +68,6 @@
     <div class = "back">
       <a href="../zoo-brian/brian.html">Back</a>
     </div>
-    
+
   </body>
 </html>

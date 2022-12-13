@@ -41,6 +41,30 @@
                 The Red Panda
                 <img src="img/red-panda-icon.png" class="red-panda-icon">
             </h1>
+            <label class="add-fav">
+              <input type="checkbox"id="addLike" onclick="handleClick(this)"
+                style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+            </label>
+
+            <script>
+              function handleClick(cb) {
+                if(localStorage.getItem("redpanda_likes") == null){
+                  localStorage.setItem("redpanda_likes", "1");
+                  document.getElementById("likes").innerHTML = 1;
+                  localStorage.setItem("redpanda_", "true");
+                }
+                else if(cb.checked){
+                  localStorage.setItem("redpanda_likes", parseInt(localStorage.getItem("redpanda_likes")) + 1);
+                  document.getElementById("likes").innerHTML = localStorage.getItem("redpanda_likes");
+                  localStorage.setItem("redpanda_", "true");
+                }
+                else{
+                  localStorage.setItem("redpanda_likes", parseInt(localStorage.getItem("redpanda_likes")) - 1);
+                  document.getElementById("likes").innerHTML = localStorage.getItem("redpanda_likes");
+                  localStorage.setItem("redpanda_", "false");
+                }
+              }
+            </script>
         </div>
         <div class="row">
             <div class="col-md-4">

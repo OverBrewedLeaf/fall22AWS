@@ -30,18 +30,18 @@
         </ul>
       </div>
     </nav>
-    
+
     <h1>Bottlenose Dolphin</h1>
     <img src="img/dolphin.jpg" width="500px" height="400px" alt="dolphin">
-    <p> 
-      The bottlenose dolphins are in the genus Tursiops. There are two species of bottlenose dolphins: the common 
+    <p>
+      The bottlenose dolphins are in the genus Tursiops. There are two species of bottlenose dolphins: the common
       bottlenose dolphin (Tursiops truncatus) and the Indo-Pacific bottlenose dolphin (Tursiops aduncus).
-      They marine mammals and must surface to breathe air and give birth. They eat fish, squid, and shrimp and they inhabit 
-      warm and temperate seas. They also have a lifespan from 45 to 50 years. 
+      They marine mammals and must surface to breathe air and give birth. They eat fish, squid, and shrimp and they inhabit
+      warm and temperate seas. They also have a lifespan from 45 to 50 years.
     </p>
-    
+
     <label class="add-fav">
-      <input type="checkbox"id="addLike" onclick="handleClick(this)" 
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
         style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
     </label>
 
@@ -50,6 +50,7 @@
         if(localStorage.getItem("dolphin_likes") == null){
           localStorage.setItem("dolphin_likes", "1");
           document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("dolphin_", "true");
         }
         else if(cb.checked){
           localStorage.setItem("dolphin_likes", parseInt(localStorage.getItem("dolphin_likes")) + 1);
@@ -67,6 +68,6 @@
     <div class = "back">
       <a href="../zoo-brian/brian.html">Back</a>
     </div>
-    
+
   </body>
 </html>

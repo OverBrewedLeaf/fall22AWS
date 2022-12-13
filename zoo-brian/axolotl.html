@@ -34,14 +34,14 @@
     <h1>Axolotl</h1>
     <img src="img/axolotl.png" alt="axolotl">
     <p>
-      The axolotl (Ambystoma mexicanum) is an amphibian that was originally found in several lakes around Mexico. 
-      Their habitats are freshwater lakes and eat small prey like mollusk, worms, other arthropods and small fish. 
-      A fun fact is that axolotls have amazing healing capabilities, where they can fully regrow a limb. 
-      Axolotl are also considered "critically endangered." 
+      The axolotl (Ambystoma mexicanum) is an amphibian that was originally found in several lakes around Mexico.
+      Their habitats are freshwater lakes and eat small prey like mollusk, worms, other arthropods and small fish.
+      A fun fact is that axolotls have amazing healing capabilities, where they can fully regrow a limb.
+      Axolotl are also considered "critically endangered."
     </p>
-    
+
     <label class="add-fav">
-      <input type="checkbox"id="addLike" onclick="handleClick(this)" 
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
         style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
     </label>
 
@@ -50,6 +50,7 @@
         if(localStorage.getItem("axolotl_likes") == null){
           localStorage.setItem("axolotl_likes", "1");
           document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("axolotl_", "true");
         }
         else if(cb.checked){
           localStorage.setItem("axolotl_likes", parseInt(localStorage.getItem("axolotl_likes")) + 1);
@@ -63,7 +64,7 @@
         }
       }
     </script>
-    
+
     <div class = "back">
       <a href="../zoo-brian/brian.html">Back</a>
     </div>

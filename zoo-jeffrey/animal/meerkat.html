@@ -11,4 +11,32 @@
       <img style="width:408px;height:272px;" src="https://img.freepik.com/premium-photo/vertical-shot-cute-meerkat-sitting-wood-piece-meerkat-suricate-adult-juvenile_641010-577.jpg"></img>
     </div>
     <h3>The meerkat (Suricata suricatta) or suricate is a small mongoose discovered in southern Africa. It is characterised by its large head, giant eyes, pointed snout, lengthy legs, skinny tapering tail, and a brindled coat pattern. The head-and-body size is round 24–35 cm, and the weight is usually between 0.62 and 0.97 kg. The coat is mild gray to yellowish-brown with alternate, mild and darkish bands on the back. Meerkats have foreclaws tailored for digging and have the capability to thermoregulate to live on in their harsh, dry habitat.</h3>
+
+    <h3>
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(localStorage.getItem("meerkat_likes") == null){
+          localStorage.setItem("meerkat_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("meerkat_", "true");
+        }
+        else if(cb.checked){
+          localStorage.setItem("meerkat_likes", parseInt(localStorage.getItem("meerkat_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("meerkat_likes");
+          localStorage.setItem("meerkat_", "true");
+        }
+        else{
+          localStorage.setItem("meerkat_likes", parseInt(localStorage.getItem("meerkat_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("meerkat_likes");
+          localStorage.setItem("meerkat_", "false");
+        }
+      }
+    </script>
+    </h3>
+
 </body>

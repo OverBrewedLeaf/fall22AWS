@@ -11,5 +11,33 @@
       <img style="width:408px;height:272px;" src="https://live.staticflickr.com/4585/25060615298_4feef4cef9_b.jpg"></img>
     </div>
     <h3>A hedgehog is an animal belonging to the order Eulipotyphla (suborder Erinaceomorpha) and the infraorder Myrmecophagiformes (superfamily Erinaceoidea). They are small mammals characterized by having four limbs, three eyelids, and a tail covered with hair.</h3>
+
+    <h3>
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(localStorage.getItem("hedgehog_likes") == null){
+          localStorage.setItem("hedgehog_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("hedgehog_", "true");
+        }
+        else if(cb.checked){
+          localStorage.setItem("hedgehog_likes", parseInt(localStorage.getItem("hedgehog_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("hedgehog_likes");
+          localStorage.setItem("hedgehog_", "true");
+        }
+        else{
+          localStorage.setItem("hedgehog_likes", parseInt(localStorage.getItem("hedgehog_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("hedgehog_likes");
+          localStorage.setItem("hedgehog_", "false");
+        }
+      }
+    </script>
+    </h3>
+    
     <h1 style="text-align: center;"></h1>
 </body>

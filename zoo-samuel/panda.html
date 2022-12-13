@@ -58,6 +58,31 @@
       They are also quite dexterous with a wrist bone functioning similarly to a thumb, allowing them to hold things like bamboo.
     </text>
 
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(localStorage.getItem("panda_likes") == null){
+          localStorage.setItem("panda_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("panda_", "true");
+        }
+        else if(cb.checked){
+          localStorage.setItem("panda_likes", parseInt(localStorage.getItem("panda_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("panda_likes");
+          localStorage.setItem("panda_", "true");
+        }
+        else{
+          localStorage.setItem("panda_likes", parseInt(localStorage.getItem("panda_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("panda_likes");
+          localStorage.setItem("panda_", "false");
+        }
+      }
+    </script>
+
     <!-- bootstrap scripts -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

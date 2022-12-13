@@ -38,6 +38,30 @@
     <div class="container">
         <div class="jumbotron">
             <h1>The Rabb<img src="img/orange-carrot-icon.png" class="carrot-icon">t</h1>
+            <label class="add-fav">
+              <input type="checkbox"id="addLike" onclick="handleClick(this)"
+                style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+            </label>
+
+            <script>
+              function handleClick(cb) {
+                if(localStorage.getItem("grassrabbit_likes") == null){
+                  localStorage.setItem("grassrabbit_likes", "1");
+                  document.getElementById("likes").innerHTML = 1;
+                  localStorage.setItem("grassrabbit_", "true");
+                }
+                else if(cb.checked){
+                  localStorage.setItem("grassrabbit_likes", parseInt(localStorage.getItem("grassrabbit_likes")) + 1);
+                  document.getElementById("likes").innerHTML = localStorage.getItem("grassrabbit_likes");
+                  localStorage.setItem("grassrabbit_", "true");
+                }
+                else{
+                  localStorage.setItem("grassrabbit_likes", parseInt(localStorage.getItem("grassrabbit_likes")) - 1);
+                  document.getElementById("likes").innerHTML = localStorage.getItem("grassrabbit_likes");
+                  localStorage.setItem("grassrabbit_", "false");
+                }
+              }
+            </script>
         </div>
         <div class="row">
             <img src="img/rabbit-collage.webp">

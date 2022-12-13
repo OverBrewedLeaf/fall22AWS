@@ -58,6 +58,31 @@
       To avoid predators, deer hide in thickets in the forest or outrun their predators.
     </text>
 
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(localStorage.getItem("deer_likes") == null){
+          localStorage.setItem("deer_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("deer_", "true");
+        }
+        else if(cb.checked){
+          localStorage.setItem("deer_likes", parseInt(localStorage.getItem("deer_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("deer_likes");
+          localStorage.setItem("deer_", "true");
+        }
+        else{
+          localStorage.setItem("deer_likes", parseInt(localStorage.getItem("deer_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("deer_likes");
+          localStorage.setItem("deer_", "false");
+        }
+      }
+    </script>
+
     <!-- bootstrap scripts -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

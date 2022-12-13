@@ -58,6 +58,31 @@
       Rabbits don’t hibernate and are generally silent, other than communication of predators with screams or loud foot thumps.
     </text>
 
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(localStorage.getItem("rabbit_likes") == null){
+          localStorage.setItem("rabbit_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("rabbit_", "true");
+        }
+        else if(cb.checked){
+          localStorage.setItem("rabbit_likes", parseInt(localStorage.getItem("rabbit_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("rabbit_likes");
+          localStorage.setItem("rabbit_", "true");
+        }
+        else{
+          localStorage.setItem("rabbit_likes", parseInt(localStorage.getItem("rabbit_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("rabbit_likes");
+          localStorage.setItem("rabbit_", "false");
+        }
+      }
+    </script>
+
     <!-- bootstrap scripts -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

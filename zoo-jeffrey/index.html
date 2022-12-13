@@ -7,7 +7,41 @@
 <body>
   <a style="text-align: center;" href="../index.html">Back</a>
   <h1 >Welcome to Jeffrey's Zoo</h1>
-  <h3>See the animals at the zoo:</h3>
+  <h3>See the animals at the zoo:
+      <label class="ticket">
+        <input type="checkbox"id="addLike" onclick="handleClick(this)"
+          style="opacity:0; position: absolute;">Buy Tickets ($100)</span></input>
+      </label>
+
+      <script>
+          function handleClick(cb) {
+              let number = +prompt("Enter how many tickets you want to buy. Balance: $" + localStorage.getItem("balance_"), 1);
+              if(isNaN(number) || number <= 0) {
+                  alert('Error: Not valid number');
+              }
+              else {
+                  if(number * 100 < localStorage.getItem("balance_")){
+                      for(let i = 0; i < number; i++){
+                          if(i == 0 && localStorage.getItem("tickets_").length > 0){
+                              localStorage.setItem("tickets_", localStorage.getItem("tickets_") + ".");
+                          }
+                          let date = new Date();
+                          date.setDate(date.getDate() + 30);
+                          localStorage.setItem("balance_", parseInt(localStorage.getItem("balance_")) - 100);
+                          localStorage.setItem("tickets_", localStorage.getItem("tickets_") + "Desert Zoo | Expires: " + date);
+                          if(i < number - 1){
+                              localStorage.setItem("tickets_", localStorage.getItem("tickets_") + ".");
+                          }
+                      }
+                      alert("Tickets bought. Balance: $" + localStorage.getItem("balance_"));
+                  }
+                  else{
+                      alert("Error: Out of balance!");
+                  }
+              }
+          }
+      </script>
+  </h3>
 
   <div class="animal">
     <!-- Fennec fox -->
@@ -26,6 +60,9 @@
     <a href="animal/rabbit.html">
       <img style="width:408px;height:272px;" src="https://images-ext-2.discordapp.net/external/NEK5vn-EB2iEpIEBIZZ57mhQ7PU0aqavDBfhwWlDONA/https/www.thoughtco.com/thmb/3Dxh70k3EXmbm_XZ5VqG22m1xnw%3D/2121x1414/filters%3Afill%28auto%2C1%29/GettyImages-532882241-f1b45f7da6d74676ba49cb1af22c3ecd.jpg?width=810&height=540"></img>
     </a>
+
+
+
   </div>
 
 </body>

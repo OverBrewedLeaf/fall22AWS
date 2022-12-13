@@ -31,10 +31,10 @@
         </ul>
       </div>
     </nav>
-    
+
     <h1>Welcome to Brian's Zoo</h1>
     <h3>See the animals at the zoo:</h3>
-  
+
     <div class="container">
       <div class="link">
         <a href="turtle.html"><img src="img/mc-turtle.jpg"></a>
@@ -50,8 +50,42 @@
       </div>
       <div class = "back">
         <a href="../index.html">Home Page</a>
+
+        <label class="add-fav">
+          <input type="checkbox"id="addLike" onclick="handleClick(this)"
+            style="opacity:0; position: absolute;">Buy Tickets ($100)</span></input>
+        </label>
+
+        <script>
+            function handleClick(cb) {
+                let number = +prompt("Enter how many tickets you want to buy. Balance: $" + localStorage.getItem("balance_"), 1);
+                if(isNaN(number) || number <= 0) {
+                    alert('Error: Not valid number');
+                }
+                else {
+                    if(number * 100 < localStorage.getItem("balance_")){
+                        for(let i = 0; i < number; i++){
+                            if(i == 0 && localStorage.getItem("tickets_").length > 0){
+                                localStorage.setItem("tickets_", localStorage.getItem("tickets_") + ".");
+                            }
+                            let date = new Date();
+                            date.setDate(date.getDate() + 30);
+                            localStorage.setItem("balance_", parseInt(localStorage.getItem("balance_")) - 100);
+                            localStorage.setItem("tickets_", localStorage.getItem("tickets_") + "Aquarium Zoo | Expires: " + date);
+                            if(i < number - 1){
+                                localStorage.setItem("tickets_", localStorage.getItem("tickets_") + ".");
+                            }
+                        }
+                        alert("Tickets bought. Balance: $" + localStorage.getItem("balance_"));
+                    }
+                    else{
+                        alert("Error: Out of balance!");
+                    }
+                }
+            }
+        </script>
       </div>
     </div>
-    
+
   </body>
 </html>

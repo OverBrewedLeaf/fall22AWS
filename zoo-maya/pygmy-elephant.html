@@ -40,6 +40,30 @@
             <h1>
                 The Borneo Pygmy Elephant
             </h1>
+            <label class="add-fav">
+              <input type="checkbox"id="addLike" onclick="handleClick(this)"
+                style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+            </label>
+
+            <script>
+              function handleClick(cb) {
+                if(localStorage.getItem("pygmyelephant_likes") == null){
+                  localStorage.setItem("pygmyelephant_likes", "1");
+                  document.getElementById("likes").innerHTML = 1;
+                  localStorage.setItem("pygmyelephant_", "true");
+                }
+                else if(cb.checked){
+                  localStorage.setItem("pygmyelephant_likes", parseInt(localStorage.getItem("pygmyelephant_likes")) + 1);
+                  document.getElementById("likes").innerHTML = localStorage.getItem("pygmyelephant_likes");
+                  localStorage.setItem("pygmyelephant_", "true");
+                }
+                else{
+                  localStorage.setItem("pygmyelephant_likes", parseInt(localStorage.getItem("pygmyelephant_likes")) - 1);
+                  document.getElementById("likes").innerHTML = localStorage.getItem("pygmyelephant_likes");
+                  localStorage.setItem("pygmyelephant_", "false");
+                }
+              }
+            </script>
         </div>
         <img src="img/pygmy-elephant.png">
         <div class="row">

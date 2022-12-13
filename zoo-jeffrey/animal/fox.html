@@ -11,5 +11,32 @@
       <img style="width:408px;height:272px;" src="https://media.istockphoto.com/photos/the-fennec-fox-picture-id1346509240?k=20&m=1346509240&s=612x612&w=0&h=O4WSjefOT5oEP8iTZ9vB1f7qp__M2BldHFkcuhJuNco="></img>
     </div>
     <h3>The fennec fox (Vulpes zerda) is a little crepuscular fox that is indigenous to the North African deserts, from the Sinai Peninsula to the Western Sahara. They use their huge ears are used to vent heat and listen for underground prey. Its coat, ears, and kidney functions have evolved to fit the hot, dry climate of the desert. It primarily consumes birds, small animals, and insects. In captivity, the fennec can live up to 14 years, whereas in the wild, it can live for just approximately 10 years. The Verreaux's eagle-owl, jackals, and other large mammals are its predators. Families of fennecs create protective and habitational tunnels in the sand.</h3>
-    
+
+    <h3>
+    <label class="add-fav">
+      <input type="checkbox"id="addLike" onclick="handleClick(this)"
+        style="opacity:0; position: absolute;">Like <span id="likes"></span></input>
+    </label>
+
+    <script>
+      function handleClick(cb) {
+        if(localStorage.getItem("fox_likes") == null){
+          localStorage.setItem("fox_likes", "1");
+          document.getElementById("likes").innerHTML = 1;
+          localStorage.setItem("fox_", "true");
+        }
+        else if(cb.checked){
+          localStorage.setItem("fox_likes", parseInt(localStorage.getItem("fox_likes")) + 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("fox_likes");
+          localStorage.setItem("fox_", "true");
+        }
+        else{
+          localStorage.setItem("fox_likes", parseInt(localStorage.getItem("fox_likes")) - 1);
+          document.getElementById("likes").innerHTML = localStorage.getItem("fox_likes");
+          localStorage.setItem("fox_", "false");
+        }
+      }
+    </script>
+    </h3>
+
 </body>

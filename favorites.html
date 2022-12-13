@@ -9,6 +9,102 @@
     <h1>Favorites Page</h1>
 
     <script>
+        function deer_(){
+            localStorage.setItem("deer_", "false");
+            localStorage.setItem("deer_likes", parseInt(localStorage.getItem("deer_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("deer_") == "true"){
+            document.write("<h3><a href=\"zoo-samuel/deer.html\">Deer</a> <p id=\"demo\" onclick=\"deer_()\">Remove</p></h3>");
+        }
+        function panda_(){
+            localStorage.setItem("panda_", "false");
+            localStorage.setItem("panda_likes", parseInt(localStorage.getItem("panda_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("panda_") == "true"){
+            document.write("<h3><a href=\"zoo-samuel/panda.html\">Panda</a> <p id=\"demo\" onclick=\"panda_()\">Remove</p></h3>");
+        }
+        function parrot_(){
+            localStorage.setItem("parrot_", "false");
+            localStorage.setItem("parrot_likes", parseInt(localStorage.getItem("parrot_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("parrot_") == "true"){
+            document.write("<h3><a href=\"zoo-samuel/parrot.html\">Parrot</a> <p id=\"demo\" onclick=\"parrot_()\">Remove</p></h3>");
+        }
+        function rabbit_(){
+            localStorage.setItem("rabbit_", "false");
+            localStorage.setItem("rabbit_likes", parseInt(localStorage.getItem("rabbit_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("rabbit_") == "true"){
+            document.write("<h3><a href=\"zoo-samuel/rabbit.html\">Forest Rabbit</a> <p id=\"demo\" onclick=\"rabbit_()\">Remove</p></h3>");
+        }
+        function fox_(){
+            localStorage.setItem("fox_", "false");
+            localStorage.setItem("fox_likes", parseInt(localStorage.getItem("fox_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("fox_") == "true"){
+            document.write("<h3><a href=\"zoo-jeffrey/animal/fox.html\">Fox</a> <p id=\"demo\" onclick=\"fox_()\">Remove</p></h3>");
+        }
+        function hedgehog_(){
+            localStorage.setItem("hedgehog_", "false");
+            localStorage.setItem("hedgehog_likes", parseInt(localStorage.getItem("hedgehog_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("hedgehog_") == "true"){
+            document.write("<h3><a href=\"zoo-jeffrey/animal/hedgehog.html\">Hedgehog</a> <p id=\"demo\" onclick=\"hedgehog_()\">Remove</p></h3>");
+        }
+        function meerkat_(){
+            localStorage.setItem("meerkat_", "false");
+            localStorage.setItem("meerkat_likes", parseInt(localStorage.getItem("meerkat_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("meerkat_") == "true"){
+            document.write("<h3><a href=\"zoo-jeffrey/animal/meerkat.html\">Meerkat</a> <p id=\"demo\" onclick=\"meerkat_()\">Remove</p></h3>");
+        }
+        function desertrabbit_(){
+            localStorage.setItem("desertrabbit_", "false");
+            localStorage.setItem("desertrabbit_likes", parseInt(localStorage.getItem("desertrabbit_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("desertrabbit_") == "true"){
+            document.write("<h3><a href=\"zoo-jeffrey/animal/rabbit.html\">Black-Tailed Rabbit</a> <p id=\"demo\" onclick=\"desertrabbit_()\">Remove</p></h3>");
+        }
+        function crocodile_(){
+            localStorage.setItem("crocodile_", "false");
+            localStorage.setItem("crocodile_likes", parseInt(localStorage.getItem("crocodile_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("crocodile_") == "true"){
+            document.write("<h3><a href=\"zoo-maya/crocodile.html\">Crocodile</a> <p id=\"demo\" onclick=\"crocodile_()\">Remove</p></h3>");
+        }
+        function pygmyelephant_(){
+            localStorage.setItem("pygmyelephant_", "false");
+            localStorage.setItem("pygmyelephant_likes", parseInt(localStorage.getItem("pygmyelephant_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("pygmyelephant_") == "true"){
+            document.write("<h3><a href=\"zoo-maya/pygmy-elephant.html\">Pygmy Elephant</a> <p id=\"demo\" onclick=\"pygmyelephant_()\">Remove</p></h3>");
+        }
+        function grassrabbit_(){
+            localStorage.setItem("grassrabbit_", "false");
+            localStorage.setItem("grassrabbit_likes", parseInt(localStorage.getItem("grassrabbit_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("grassrabbit_") == "true"){
+            document.write("<h3><a href=\"zoo-maya/rabbit.html\">Rabbit</a> <p id=\"demo\" onclick=\"grassrabbit_()\">Remove</p></h3>");
+        }
+        function redpanda_(){
+            localStorage.setItem("redpanda_", "false");
+            localStorage.setItem("redpanda_likes", parseInt(localStorage.getItem("redpanda_likes")) - 1);
+            location.reload();
+        }
+        if(localStorage.getItem("redpanda_") == "true"){
+            document.write("<h3><a href=\"zoo-maya/red-panda.html\">Red Panda</a> <p id=\"demo\" onclick=\"redpanda_()\">Remove</p></h3>");
+        }
         function axolotl_(){
             localStorage.setItem("axolotl_", "false");
             localStorage.setItem("axolotl_likes", parseInt(localStorage.getItem("axolotl_likes")) - 1);
@@ -41,9 +137,9 @@
         if(localStorage.getItem("turtle_") == "true"){
             document.write("<h3><a href=\"zoo-brian/turtle.html\">Turtle</a> <p id=\"demo\" onclick=\"turtle_()\">Remove</p></h3>");
         }
-    </script> 
-    
-    
+    </script>
+
+
 
     <h4>
         <div class = "back">
