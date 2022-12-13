@@ -46,6 +46,12 @@
 
       <script>
           function handleClick(cb) {
+              if(localStorage.getItem("balance_") == null){
+                  localStorage.setItem("balance_", "0");
+              }
+              if(localStorage.getItem("tickets_") == null){
+                  localStorage.setItem("tickets_", "");
+              }
               let number = +prompt("Enter how many tickets you want to buy. Balance: $" + localStorage.getItem("balance_"), 1);
               if(isNaN(number) || number <= 0) {
                   alert('Error: Not valid number');
@@ -53,10 +59,7 @@
               else {
                   if(number * 100 < localStorage.getItem("balance_")){
                       for(let i = 0; i < number; i++){
-                          if(localStorage.getItem("tickets_") == null){
-                              localStorage.setItem("tickets_", "");
-                          }
-                          if(i == 0 && localStorage.getItem("tickets_").length > 0)){
+                          if(i == 0 && localStorage.getItem("tickets_").length > 0){
                               localStorage.setItem("tickets_", localStorage.getItem("tickets_") + ".");
                           }
                           let date = new Date();

@@ -12,7 +12,9 @@
         if(localStorage.getItem("balance_") == null){
             localStorage.setItem("balance_", "0");
         }
-
+        if(localStorage.getItem("tickets_") == null){
+            localStorage.setItem("tickets_", "");
+        }
         function add(){
             let number = +prompt("Enter the deposit amount");
             if(isNaN(number)) {
