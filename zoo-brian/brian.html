@@ -65,7 +65,10 @@
                 else {
                     if(number * 100 < localStorage.getItem("balance_")){
                         for(let i = 0; i < number; i++){
-                            if(i == 0 && (localStorage.getItem("tickets_") == null || localStorage.getItem("tickets_").length > 0)){
+                            if(localStorage.getItem("tickets_") == null){
+                                localStorage.setItem("tickets_", "");
+                            }
+                            if(i == 0 && localStorage.getItem("tickets_").length > 0)){
                                 localStorage.setItem("tickets_", localStorage.getItem("tickets_") + ".");
                             }
                             let date = new Date();
