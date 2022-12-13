@@ -66,10 +66,10 @@
                 }
                 let number = +prompt("Enter how many tickets you want to buy. Balance: $" + localStorage.getItem("balance_"), 1);
                 if(isNaN(number) || number <= 0) {
-                    alert('Error: Not valid number');
+                    alert("Error: Not valid number");
                 }
                 else {
-                    if(number * 100 < localStorage.getItem("balance_")){
+                    if(number * 100 <= localStorage.getItem("balance_")){
                         for(let i = 0; i < number; i++){
                             if(localStorage.getItem("tickets_") == null){
                                 localStorage.setItem("tickets_", "");
